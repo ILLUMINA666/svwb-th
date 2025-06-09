@@ -1,0 +1,12 @@
+/* html-card-grid.css */
+
+.card-grid-container { /* This is the new class for your HTML div */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding for the entire grid area */
+    margin-bottom: 20px; /* Space below the grid */
+    /* You can add a background-color here if you want the grid area to have a distinct background */
+    /* background-color: var(--background-primary); */
+}

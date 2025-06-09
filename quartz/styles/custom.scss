@@ -1,3 +1,8 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+.callout-content > .table-wrapper:first-child,
+.callout-content > table:first-child {
+  margin-top: -1em; /* Adjust this value as needed */
+}

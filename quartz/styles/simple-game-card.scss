@@ -1,0 +1,58 @@
+/* simple-game-card.css - REVISED FOR HTML GRID */
+
+/* Base styling for the card container */
+.simple-card-item { /* <-- NEW CLASS NAME for the card item itself */
+    /* Responsive sizing within a flex grid */
+    flex-grow: 1; /* Allows card to grow and fill available space */
+    flex-shrink: 1; /* Allows card to shrink */
+    flex-basis: auto; /* Let content determine initial basis, or set a minimum */
+
+    max-width: 488px; /* Max width of the card itself (excluding its own padding) */
+    min-width: 200px; /* Ensures card doesn't become too tiny */
+    height: auto; /* Height adjusts based on content */
+    box-sizing: border-box;
+
+    /* Card appearance */
+    background-color: var(--background-secondary);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    overflow: hidden;
+    /* margin-bottom: 0; -- Removed as gap handles spacing */
+
+    /* Flexbox for stacking image and name */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+    padding: 20px; /* Inner padding for the card */
+}
+
+/* Styling for the image within the card */
+.simple-card-item img { /* <-- Updated selector */
+    width: 100%;
+    height: auto;
+    max-width: 488px;
+    max-height: 632px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    flex-shrink: 0;
+}
+
+/* Styling for the Card Name (using H1 Markdown) */
+.simple-card-item h1 { /* <-- Updated selector */
+    font-size: 1.8em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--text-normal);
+    flex-shrink: 0;
+}
+
+/* Optional: Hover effect */
+.simple-card-item:hover { /* <-- Updated selector */
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 10px 30px 0 rgba(0,0,0,0.19);
+    transform: translateY(-3px);
+    transition: all 0.2s ease-in-out;
+}
